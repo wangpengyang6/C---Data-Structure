@@ -2,7 +2,7 @@
 #include"Slist.h"
 
 
-//´´½¨Ò»¸öĞÂµÄ½áµã
+//åˆ›å»ºä¸€ä¸ªæ–°çš„ç»“ç‚¹
 SL* BuyListNode(DataType x)
 {
 	SL* newnode = (SL*)malloc(sizeof(SL));
@@ -18,7 +18,7 @@ SL* BuyListNode(DataType x)
 	return newnode; 
 }
 
-//´òÓ¡
+//æ‰“å°
 void SlPrint(SL* ps)
 {
 	SL* cur = ps;
@@ -32,10 +32,10 @@ void SlPrint(SL* ps)
 	printf("NULL\n");
 }
 
-//Î²²å
+//å°¾æ’
 void SlPushBack(SL** pphead, DataType x)
 {
-	assert(pphead);
+
 	SL* newnode = BuyListNode(x);
 
 	if (*pphead == NULL)
@@ -44,7 +44,7 @@ void SlPushBack(SL** pphead, DataType x)
 	}
 	else
 	{
-		//ÕÒÎ²
+		//æ‰¾å°¾
 		SL* tail = *pphead;
 
 		while (tail->next != NULL)
@@ -56,17 +56,17 @@ void SlPushBack(SL** pphead, DataType x)
 	}
 }
 
-//Í·²å
+//å¤´æ’
 void SlPushFront(SL** pphead, DataType x)
 {
-	assert(pphead);
+
 
 	SL* newnode = BuyListNode(x);
 	newnode->next = *pphead;
 	*pphead = newnode;
 }
 
-//Î²É¾
+//å°¾åˆ 
 void SlPopBack(SL** pphead)
 {
 	assert(*pphead);
@@ -94,7 +94,7 @@ void SlPopBack(SL** pphead)
 
 }
 
-//Í·É¾
+//å¤´åˆ 
 void SlPopFront(SL** pphead)
 {
 	assert(*pphead != NULL);
@@ -107,7 +107,7 @@ void SlPopFront(SL** pphead)
 
 }
 
-//ÕÒµ½xÖµµÄµØÖ·
+//æ‰¾åˆ°xå€¼çš„åœ°å€
 SL* SlFind(SL* phead, DataType x)
 {
 	assert(phead);
@@ -126,7 +126,7 @@ SL* SlFind(SL* phead, DataType x)
 	return NULL;
 }
 
-//ÔÚposºóÃæ²åÈëÒ»¸öÊı
+//åœ¨posåé¢æ’å…¥ä¸€ä¸ªæ•°
 void SlInsertAfter(SL* pos, DataType x)
 {
 	SL* newnode = BuyListNode(x);
@@ -134,7 +134,7 @@ void SlInsertAfter(SL* pos, DataType x)
 	pos->next = newnode;
 }
 
-//ÔÚposÇ°Ãæ²åÈëÒ»¸öÊı
+//åœ¨poså‰é¢æ’å…¥ä¸€ä¸ªæ•°
 void SlInsertBefore(SL** pphead, SL* pos, DataType x)
 {
 	assert(*pphead);
@@ -158,7 +158,7 @@ void SlInsertBefore(SL** pphead, SL* pos, DataType x)
 	}
 }
 
-//É¾³ıÄ³¸öÎ»ÖÃ
+//åˆ é™¤æŸä¸ªä½ç½®
 void SlErase(SL** pphead, SL* pos)
 {
 	assert(*pphead);
@@ -192,7 +192,7 @@ void SListEraseAfter(SL* pos)
 	next = NULL;
 }
 
-//Ïú»ÙÁ´±í
+//é”€æ¯é“¾è¡¨
 void SlDestory(SL** pphead)
 {
 	assert(pphead);
