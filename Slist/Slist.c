@@ -1,7 +1,6 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include"Slist.h"
 
-
 //创建一个新的结点
 SL* BuyListNode(DataType x)
 {
