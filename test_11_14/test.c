@@ -1,8 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
 
-Ë¼Â·£º±£³ÖÒ»¸ö¶ÓÁÐ´æÊý¾Ý£¬Ò»¸ö¶ÓÁÐÎª¿Õ
-      ¡°ÈëÕ»¡±½øÈë´æÊý¾Ý¶ÓÁÐ£¬¡°³öÕ»¡±½«ÓÐÊý¾ÝµÄ¶ÓÁÐÖÐÇ°size - 1Ïîµ¼Êý¾Ýµ½¿Õ¶ÓÁÐ£¬×îºó³öÓÐÊý¾ÝµÄ¶ÓÁÐ×îºóÒ»Ïî
+æ€è·¯ï¼šä¿æŒä¸€ä¸ªé˜Ÿåˆ—å­˜æ•°æ®ï¼Œä¸€ä¸ªé˜Ÿåˆ—ä¸ºç©º
+      â€œå…¥æ ˆâ€è¿›å…¥å­˜æ•°æ®é˜Ÿåˆ—ï¼Œâ€œå‡ºæ ˆâ€å°†æœ‰æ•°æ®çš„é˜Ÿåˆ—ä¸­å‰size - 1é¡¹å¯¼æ•°æ®åˆ°ç©ºé˜Ÿåˆ—ï¼Œæœ€åŽå‡ºæœ‰æ•°æ®çš„é˜Ÿåˆ—æœ€åŽä¸€é¡¹
 
 typedef int QDataType;
 
@@ -20,25 +20,25 @@ typedef struct Queue
 }Queue;
 
 
-// ³õÊ¼»¯¶ÓÁÐ 
+// åˆå§‹åŒ–é˜Ÿåˆ— 
 void QueueInit(Queue* pq);
-// Ïú»Ù¶ÓÁÐ 
+// é”€æ¯é˜Ÿåˆ— 
 void QueueDestroy(Queue* pq);
-// ¶ÓÎ²Èë¶ÓÁÐ 
+// é˜Ÿå°¾å…¥é˜Ÿåˆ— 
 void QueuePush(Queue* pq, QDataType x);
-// ¶ÓÍ·³ö¶ÓÁÐ
+// é˜Ÿå¤´å‡ºé˜Ÿåˆ—
 void QueuePop(Queue* pq);
-// ¼ì²â¶ÓÁÐÊÇ·ñÎª¿Õ
+// æ£€æµ‹é˜Ÿåˆ—æ˜¯å¦ä¸ºç©º
 bool QueueEmpty(Queue* pq);
-// »ñÈ¡¶ÓÁÐÍ·²¿ÔªËØ 
+// èŽ·å–é˜Ÿåˆ—å¤´éƒ¨å…ƒç´  
 QDataType QueueFront(Queue* pq);
-// »ñÈ¡¶ÓÁÐ¶ÓÎ²ÔªËØ 
+// èŽ·å–é˜Ÿåˆ—é˜Ÿå°¾å…ƒç´  
 QDataType QueueBack(Queue* pq);
-// »ñÈ¡¶ÓÁÐÖÐÓÐÐ§ÔªËØ¸öÊý 
+// èŽ·å–é˜Ÿåˆ—ä¸­æœ‰æ•ˆå…ƒç´ ä¸ªæ•° 
 int QueueSize(Queue* pq);
 
 
-// ³õÊ¼»¯¶ÓÁÐ 
+// åˆå§‹åŒ–é˜Ÿåˆ— 
 void QueueInit(Queue* pq)
 {
 	assert(pq);
@@ -46,7 +46,7 @@ void QueueInit(Queue* pq)
 	pq->size = 0;
 }
 
-// Ïú»Ù¶ÓÁÐ 
+// é”€æ¯é˜Ÿåˆ— 
 void QueueDestroy(Queue* pq)
 {
 	assert(pq);
@@ -61,7 +61,7 @@ void QueueDestroy(Queue* pq)
 	pq->size = 0;
 }
 
-// ¶ÓÎ²Èë¶ÓÁÐ 
+// é˜Ÿå°¾å…¥é˜Ÿåˆ— 
 void QueuePush(Queue* pq, QDataType x)
 {
 	assert(pq);
@@ -87,7 +87,7 @@ void QueuePush(Queue* pq, QDataType x)
 	pq->size++;
 }
 
-// ¶ÓÍ·³ö¶ÓÁÐ
+// é˜Ÿå¤´å‡ºé˜Ÿåˆ—
 void QueuePop(Queue* pq)
 {
 	assert(pq);
@@ -110,14 +110,14 @@ void QueuePop(Queue* pq)
 
 }
 
-// ¼ì²â¶ÓÁÐÊÇ·ñÎª¿Õ
+// æ£€æµ‹é˜Ÿåˆ—æ˜¯å¦ä¸ºç©º
 bool QueueEmpty(Queue* pq)
 {
 	assert(pq);
 	return pq->head == NULL && pq->tail == NULL;
 }
 
-// »ñÈ¡¶ÓÁÐÍ·²¿ÔªËØ 
+// èŽ·å–é˜Ÿåˆ—å¤´éƒ¨å…ƒç´  
 QDataType QueueFront(Queue* pq)
 {
 	assert(pq);
@@ -125,7 +125,7 @@ QDataType QueueFront(Queue* pq)
 	return pq->head->data;
 }
 
-// »ñÈ¡¶ÓÁÐ¶ÓÎ²ÔªËØ 
+// èŽ·å–é˜Ÿåˆ—é˜Ÿå°¾å…ƒç´  
 QDataType QueueBack(Queue* pq)
 {
 	assert(pq);
@@ -133,18 +133,20 @@ QDataType QueueBack(Queue* pq)
 	return pq->tail->data;
 }
 
-// »ñÈ¡¶ÓÁÐÖÐÓÐÐ§ÔªËØ¸öÊý 
+// èŽ·å–é˜Ÿåˆ—ä¸­æœ‰æ•ˆå…ƒç´ ä¸ªæ•° 
 int QueueSize(Queue* pq)
 {
 	return pq->size;
 }
 
+ä»¥ä¸Šæ˜¯ç”¨Cè¯­è¨€å®žçŽ°é˜Ÿåˆ—
+
 typedef struct {
 	Queue p1;
 	Queue p2;
-} MyStack;
+} MyStack;       
 
-
+åˆ›å»ºæ ˆ
 MyStack* myStackCreate() {
 	MyStack* new = (MyStack*)malloc(sizeof(MyStack));
 	QueueInit(&new->p1);
@@ -153,6 +155,7 @@ MyStack* myStackCreate() {
 	return new;
 }
 
+è¿›æ ˆ
 void myStackPush(MyStack* obj, int x) {
 	if (!QueueEmpty(&obj->p1))
 	{
@@ -164,6 +167,7 @@ void myStackPush(MyStack* obj, int x) {
 	}
 }
 
+ç§»é™¤å¹¶è¿”å›žæ ˆé¡¶å…ƒç´ 
 int myStackPop(MyStack* obj) {
 	Queue* empty = &obj->p1;
 	Queue* unempty = &obj->p2;
@@ -184,6 +188,7 @@ int myStackPop(MyStack* obj) {
 	return tmp;
 }
 
+è¿”å›žæ ˆé¡¶å…ƒç´ 
 int myStackTop(MyStack* obj) {
 	Queue empty = obj->p1;
 	Queue unempty = obj->p2;
@@ -195,10 +200,12 @@ int myStackTop(MyStack* obj) {
 	return QueueBack(&unempty);
 }
 
+åˆ¤æ–­æ ˆæ˜¯å¦ä¸ºç©ºï¼Œä¸ºç©ºä¸ºtrue
 bool myStackEmpty(MyStack* obj) {
 	return QueueEmpty(&obj->p1) && QueueEmpty(&obj->p2);
 }
 
+é”€æ¯æ ˆ
 void myStackFree(MyStack* obj) {
 	QueueDestroy(&obj->p1);
 	QueueDestroy(&obj->p2);
