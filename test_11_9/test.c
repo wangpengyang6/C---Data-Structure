@@ -1,8 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
-LC 160 Ïà½»Á´±í
+// LC 160 ç›¸äº¤é“¾è¡¨
 
-¸øÄãÁ½¸öµ¥Á´±íµÄÍ·½Úµã headA ºÍ headB £¬ÇëÄãÕÒ³ö²¢·µ»ØÁ½¸öµ¥Á´±íÏà½»µÄÆðÊ¼½Úµã¡£Èç¹ûÁ½¸öÁ´±í²»´æÔÚÏà½»½Úµã£¬·µ»Ø NULL
+// ç»™ä½ ä¸¤ä¸ªå•é“¾è¡¨çš„å¤´èŠ‚ç‚¹ headA å’Œ headB ï¼Œè¯·ä½ æ‰¾å‡ºå¹¶è¿”å›žä¸¤ä¸ªå•é“¾è¡¨ç›¸äº¤çš„èµ·å§‹èŠ‚ç‚¹ã€‚å¦‚æžœä¸¤ä¸ªé“¾è¡¨ä¸å­˜åœ¨ç›¸äº¤èŠ‚ç‚¹ï¼Œè¿”å›ž NULL
 struct ListNode* getIntersectionNode(struct ListNode* headA, struct ListNode* headB) {
     int count_A = 0, count_B = 0;
     struct ListNode* heada = headA;
@@ -44,16 +44,16 @@ struct ListNode* getIntersectionNode(struct ListNode* headA, struct ListNode* he
     return NULL;
 }
 
-LC 141 »·ÐÎÁ´±í  ¸øÄãÒ»¸öÁ´±íµÄÍ·½Úµã head £¬ÅÐ¶ÏÁ´±íÖÐÊÇ·ñÓÐ»·
-Ë¼Â·£º¿ìÂýÖ¸Õë£¬¼´ÂýÖ¸ÕëÒ»´Î×ßÒ»²½£¬¿ìÖ¸ÕëÒ»´Î×ßÁ½²½£¬Á½¸öÖ¸Õë´ÓÁ´±íÆäÊµÎ»ÖÃ¿ªÊ¼ÔËÐÐ£¬Èç¹ûÁ´±í´ø»·ÔòÒ»¶¨»áÔÚ»·ÖÐÏàÓö£¬·ñÔò¿ìÖ¸ÕëÂÊÏÈ×ßµ½Á´±íµÄÄ©Î²
+// LC 141 çŽ¯å½¢é“¾è¡¨  ç»™ä½ ä¸€ä¸ªé“¾è¡¨çš„å¤´èŠ‚ç‚¹ head ï¼Œåˆ¤æ–­é“¾è¡¨ä¸­æ˜¯å¦æœ‰çŽ¯
+// æ€è·¯ï¼šå¿«æ…¢æŒ‡é’ˆï¼Œå³æ…¢æŒ‡é’ˆä¸€æ¬¡èµ°ä¸€æ­¥ï¼Œå¿«æŒ‡é’ˆä¸€æ¬¡èµ°ä¸¤æ­¥ï¼Œä¸¤ä¸ªæŒ‡é’ˆä»Žé“¾è¡¨å…¶å®žä½ç½®å¼€å§‹è¿è¡Œï¼Œå¦‚æžœé“¾è¡¨å¸¦çŽ¯åˆ™ä¸€å®šä¼šåœ¨çŽ¯ä¸­ç›¸é‡ï¼Œå¦åˆ™å¿«æŒ‡é’ˆçŽ‡å…ˆèµ°åˆ°é“¾è¡¨çš„æœ«å°¾
 
 bool hasCycle(struct ListNode* head) {
     struct ListNode* slow = head;
     struct ListNode* fast = head;
     while (fast && fast->next)
     {
-        fast = fast->next->next; ¿ìÖ¸ÕëÒ»´Î×ßÁ½²½ 
-        slow = slow->next;       ÂýÖ¸ÕëÒ»´Î×ßÒ»²½
+        fast = fast->next->next; å¿«æŒ‡é’ˆä¸€æ¬¡èµ°ä¸¤æ­¥ 
+        slow = slow->next;       æ…¢æŒ‡é’ˆä¸€æ¬¡èµ°ä¸€æ­¥
         if (fast == slow)
         {
             return true;
@@ -64,9 +64,9 @@ bool hasCycle(struct ListNode* head) {
 }
 
 
-LC 142 »·ÐÎÁ´±í2  ¸ø¶¨Ò»¸öÁ´±íµÄÍ·½Úµã  head £¬·µ»ØÁ´±í¿ªÊ¼Èë»·µÄµÚÒ»¸ö½Úµã¡£ Èç¹ûÁ´±íÎÞ»·£¬Ôò·µ»Ø NULL
+// LC 142 çŽ¯å½¢é“¾è¡¨2  ç»™å®šä¸€ä¸ªé“¾è¡¨çš„å¤´èŠ‚ç‚¹  head ï¼Œè¿”å›žé“¾è¡¨å¼€å§‹å…¥çŽ¯çš„ç¬¬ä¸€ä¸ªèŠ‚ç‚¹ã€‚ å¦‚æžœé“¾è¡¨æ— çŽ¯ï¼Œåˆ™è¿”å›ž NULL
 
-½áÂÛ£ºÈÃÒ»¸öÖ¸Õë´ÓÁ´±íÆðÊ¼Î»ÖÃ¿ªÊ¼±éÀúÁ´±í£¬Í¬Ê±ÈÃÒ»¸öÖ¸Õë´ÓÅÐ»·Ê±ÏàÓöµãµÄÎ»ÖÃ¿ªÊ¼ÈÆ»·ÔËÐÐ£¬Á½¸öÖ¸Õë¶¼ÊÇÃ¿´Î¾ù×ßÒ»²½£¬×îÖÕ¿Ï¶¨»áÔÚÈë¿ÚµãµÄÎ»ÖÃÏàÓö¡£
+// ç»“è®ºï¼šè®©ä¸€ä¸ªæŒ‡é’ˆä»Žé“¾è¡¨èµ·å§‹ä½ç½®å¼€å§‹éåŽ†é“¾è¡¨ï¼ŒåŒæ—¶è®©ä¸€ä¸ªæŒ‡é’ˆä»Žåˆ¤çŽ¯æ—¶ç›¸é‡ç‚¹çš„ä½ç½®å¼€å§‹ç»•çŽ¯è¿è¡Œï¼Œä¸¤ä¸ªæŒ‡é’ˆéƒ½æ˜¯æ¯æ¬¡å‡èµ°ä¸€æ­¥ï¼Œæœ€ç»ˆè‚¯å®šä¼šåœ¨å…¥å£ç‚¹çš„ä½ç½®ç›¸é‡ã€‚
 
 
 struct ListNode* detectCycle(struct ListNode* head) {
