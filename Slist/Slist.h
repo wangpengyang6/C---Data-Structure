@@ -11,32 +11,32 @@ typedef struct Slist
 	struct Slist* next;
 }SL;
 
-// Òª¸Ä±ä´«¹ıÀ´µÄÖ¸ÏòµÚÒ»¸ö½ÚµãµÄÖ¸Õë¾Í´«¶ş¼¶
-// ²»¸Ä±ä´«¹ıÀ´µÄÖ¸ÏòµÚÒ»¸ö½ÚµãµÄÖ¸Õë¾Í´«Ò»¼¶
+// è¦æ”¹å˜ä¼ è¿‡æ¥çš„æŒ‡å‘ç¬¬ä¸€ä¸ªèŠ‚ç‚¹çš„æŒ‡é’ˆå°±ä¼ äºŒçº§
+// ä¸æ”¹å˜ä¼ è¿‡æ¥çš„æŒ‡å‘ç¬¬ä¸€ä¸ªèŠ‚ç‚¹çš„æŒ‡é’ˆå°±ä¼ ä¸€çº§
 
 
 
-//´´½¨Ò»¸öÁ´±íĞÂ½áµã
+//åˆ›å»ºä¸€ä¸ªé“¾è¡¨æ–°ç»“ç‚¹
 SL* BuyListNode(DataType x);
-//´òÓ¡
+//æ‰“å°
 void SlPrint(SL* phead);
-//Î²²å
+//å°¾æ’
 void SlPushBack(SL** pphead, DataType x);
-//Í·²å
+//å¤´æ’
 void SlPushFront(SL** pphead, DataType x);
-//Î²É¾
+//å°¾åˆ 
 void SlPopBack(SL** pphead);
-//Í·É¾
+//å¤´åˆ 
 void SlPopFront(SL** pphead);
-//ÕÒµ½xÖµµÄµØÖ·
+//æ‰¾åˆ°xå€¼çš„åœ°å€
 SL* SlFind(SL* phead, DataType x);
-//ÔÚposºóÃæ²åÈëÒ»¸öÊı
+//åœ¨posåé¢æ’å…¥ä¸€ä¸ªæ•°
 void SlInsertAfter(SL* pos, DataType x);
-//ÔÚposÇ°Ãæ²åÈëÒ»¸öÊı
+//åœ¨poså‰é¢æ’å…¥ä¸€ä¸ªæ•°
 void SlInsertBefore(SL** pphead, SL* pos, DataType x);
-//É¾³ıÄ³¸öÎ»ÖÃ
+//åˆ é™¤æŸä¸ªä½ç½®
 void SlErase(SL** pphead, SL* pos);
-//É¾³ıÄ³¸öÎ»ÖÃµÄºóÒ»¸öÎ»ÖÃ
+//åˆ é™¤æŸä¸ªä½ç½®çš„åä¸€ä¸ªä½ç½®
 void SListEraseAfter(SL* pos);
-//Ïú»ÙÁ´±í
+//é”€æ¯é“¾è¡¨
 void SlDestory(SL** pphead);
