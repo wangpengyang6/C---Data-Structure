@@ -23,7 +23,7 @@ void InsertSort(int* p, int n)
 	}
 }
 
-//��һ���Ż� ����ȡ��
+//第一层优化 三数取中
 
 int GetMinIndex(int p[], int begin, int end)
 {
@@ -48,20 +48,20 @@ int GetMinIndex(int p[], int begin, int end)
 	}
 }
 
-//1 .Hoare��
+//1 .Hoare法
 void Quick_sort_Hoare(int p[], int begin, int end)
 {
 	if (begin > end)
 		return;
 
-	//�ڶ����Ż� ���ŷָС����ʱ����ֱ�Ӳ������� ���ٵݹ���ô���
+	//第二层优化 快排分割到小区间时候，用直接插入排序 减少递归调用次数
 	if ((end - begin + 1) < 15)
 	{
 		InsertSort(p + begin, end - begin + 1);
 	}
 	else
 	{
-		//��һ���Ż� ����ȡ��
+		//第一层优化 三数取中
 		int midi = GetMinIndex(p, begin, end);
 		swap(p[begin], p[midi]);
 		int left = begin, right = end;
@@ -69,7 +69,7 @@ void Quick_sort_Hoare(int p[], int begin, int end)
 
 		while (left < right)
 		{
-			//���ұ�����
+			//让右边先走
 			while (left < right && p[right] >= p[keyi])
 			{
 				right--;
@@ -91,20 +91,20 @@ void Quick_sort_Hoare(int p[], int begin, int end)
 
 
 
-//2 �ڿӷ�
+//2 挖坑法
 void Quick_sort_Hole(int p[], int begin, int end)
 {
 	if (begin > end)
 		return;
 
-	//�ڶ����Ż� ���ŷָС����ʱ����ֱ�Ӳ������� ���ٵݹ���ô���
+	//第二层优化 快排分割到小区间时候，用直接插入排序 减少递归调用次数
 	if ((end - begin + 1) < 15)
 	{
 		InsertSort(p + begin, end - begin + 1);
 	}
 	else
 	{
-		//��һ���Ż� ����ȡ��
+		//第一层优化 三数取中
 		int midi = GetMinIndex(p, begin, end);
 		swap(p[begin], p[midi]);
 		int left = begin, right = end;
@@ -112,7 +112,7 @@ void Quick_sort_Hole(int p[], int begin, int end)
 		int hole = left;
 		while (left < right)
 		{
-			//���ұ�����
+			//让右边先走
 			while (left < right && p[right] >= key)
 			{
 				right--;
@@ -133,19 +133,19 @@ void Quick_sort_Hole(int p[], int begin, int end)
 
 }
 
-//3 ˫ָ�뷨 ���ʵ�ֿ���
+//3 双指针法 最简单实现快排
 void Quick_sort_Pointer(int p[], int begin, int end)
 {
 	if (begin > end)
 		return;
-	//�ڶ����Ż� ���ŷָС����ʱ����ֱ�Ӳ������� ���ٵݹ���ô���
+	//第二层优化 快排分割到小区间时候，用直接插入排序 减少递归调用次数
 	if ((end - begin + 1) < 10)
 	{
 		InsertSort(p + begin, end - begin + 1);
 	}
 	else
 	{
-		//��һ���Ż� ����ȡ��
+		//第一层优化 三数取中
 		int midi = GetMinIndex(p, begin, end);
 		swap(p[begin], p[midi]);
 
